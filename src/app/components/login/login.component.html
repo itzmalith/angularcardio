@@ -1,0 +1,37 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container mt-5 border-0 shadow rounded-3 overflow-hidden" style="margin-top: 20px;">
+  <!-- Show the heading as centered on medium and larger screens -->
+  <h3 class="text-center d-none d-md-block">Login</h3>
+  <!-- Show the heading as left-aligned on smaller screens -->
+  <h3 class="text-left d-block d-md-none">Login</h3>
+  <br>
+  <form (ngSubmit)="login()">
+    <!-- Your input fields here -->
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="loginData.email" name="email" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" [(ngModel)]="loginData.password" name="password" id="exampleInputPassword1">
+    </div>
+    <button type="submit" class="btn btn-dark" style="color: rgb(214, 145, 199);" >Submit</button>
+  </form>
+  <!-- Danger alert -->
+  <div class="alert alert-danger mt-3" role="alert" *ngIf="showDangerAlert && !passwordMatchFound">
+    No password match found.
+  </div>
+  <!-- Success alert -->
+  <div class="alert alert-success mt-3" role="alert" *ngIf="passwordMatchFound">
+    Password match found!
+  </div>
+</div>
+
+
+
+

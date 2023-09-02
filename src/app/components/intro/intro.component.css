@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+.hero-section {
+    background-image: url('https://img.freepik.com/premium-vector/health-grey-tech-background-medical-icons_88343-1209.jpg?w=2000');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 150px 0;
+}
+
+.features-section {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.feature-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+h1{
+    color: black;
+}
+h5{
+    color: black;
+}
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  }
+
+.typing{
+    color: black;
+    font-family: 'PT Serif', serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    display: inline-block;
+  }
+.blow{
+    background-color: rgb(255, 255, 255);
+    max-width: 520px;
+    text-align: center;
+    margin: 0 auto; /* Center horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     /* Add some padding to make it look better */
+  }
+  .btn.btn-dark.btn-lg {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Customize the shadow properties as needed */
+  }

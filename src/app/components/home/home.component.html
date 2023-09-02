@@ -1,0 +1,135 @@
+<app-navbar2></app-navbar2>
+
+<main class="flex-shrink-0">
+    <section class="py-0">
+        <div class="container px-5 py-1">
+
+            <h3 class="py-3 "><u>Enter relavent data to predict the risk</u></h3>
+
+            <div class="card border-0 shadow rounded-3 overflow-hidden">
+                <div class="card-body p-0">
+                    <div class="row gx-0">
+                        <div class="col-lg-6 col-xl-5 py-lg-5">
+
+                            <form #formData="ngForm" (ngSubmit)="onSubmit(formData.value)"
+                                action="your-server-action-url.php" method="post">
+
+                                <div class="p-4 p-md-5" >
+                                    <label for="ageInput"  [ngbTooltip]="'Enter your age'">Age:</label>
+                                    <input type="number" class="form-control" id="ageInput" name="age"
+                                        placeholder="Enter something" min="0" ngModel required >                                 
+
+                                </div>
+
+                                <div class="p-4 p-md-5">
+                                    <label for="sexInput">Sex:</label>
+                                    <input type="radio" name="MaleFemale" value="Male" ngModel> Male
+                                    <input type="radio" name="MaleFemale" value="Female" ngModel> Female
+                                </div>
+
+
+                                <div class="p-4 p-md-5">
+                                    <label for="chestPainInput" [ngbTooltip]="' Chest pain type, which seems to be categorized into different levels 0,1,2,3 to classify the severity or characteristics of chest pain in the context of medical assessments'">Chest Pain Type:</label>
+                                    <input type="number" class="form-control" id="chestPainInput" name="chestPain"
+                                        placeholder="Enter something" min="0" max="3" ngModel>
+                                </div>
+
+                                <div class="p-4 p-md-5">
+                                    <label for="restingBPInput" [ngbTooltip]="'Resting blood pressure in mm Hg'">Resting blood pressure (in mm Hg):</label>
+                                    <input type="number" class="form-control" id="restingBPInput" name="restingBP"
+                                        placeholder="Enter something" min="0" ngModel>
+                                </div>
+
+                                <div class="p-4 p-md-5">
+                                    <label for="cholesterolInput" [ngbTooltip]="'Serum cholesterol level in mg/dL'">Serum cholestoral (in mg/dl):</label>
+                                    <input type="number" class="form-control" id="cholesterolInput" name="cholesterol"
+                                        placeholder="Enter something" min="0" ngModel>
+                                </div>
+
+                                <div class="p-4 p-md-5">
+                                    <label for="fastingSugarInput" [ngbTooltip]="'Fasting blood sugar, where 1 may indicate high fasting blood sugar and 0 may indicate normal fasting blood sugar.'">Fasting blood sugar (>120 mg/dl):</label>
+                                    <input type="number" class="form-control" id="fastingSugarInput" name="fastingSugar"
+                                        placeholder="Enter something" min="120" ngModel>
+                                </div>
+
+                                <div class="p-4 p-md-5">
+                                    <label for="ecgResultsInput" [ngbTooltip]="'Resting electrocardiographic results, possibly categorized into different levels 0,1,2 providing information about the hearts electrical activity at rest, which is valuable in diagnosing heart conditions'">Resting electrocardiographic results:</label>
+                                    <input type="number" class="form-control" id="ecgResultsInput" name="ecgResults"
+                                        placeholder="Enter something" min="0" max="2" ngModel>
+                                </div>
+
+                                <div class="p-4 p-md-5">
+                                    <label for="maxHeartRateInput" [ngbTooltip]="'MHR = 220 - Age)'">Maximum heart rate achieved (MHR):</label>
+                                    <input type="number" class="form-control" id="maxHeartRateInput" name="maxHeartRate"
+                                        placeholder="Enter something" min="0" max="220" ngModel>
+                                </div>
+
+                                <div class="p-4 p-md-5">
+                                    <label for="exerciseAnginaInput" [ngbTooltip]="'input (1) or absence (0) of exercise-induced angina.'">Exercise induced angina:</label>
+                                    <input type="radio" name="exerciseAngina" value="yes" ngModel> Yes
+                                    <input type="radio" name="exerciseAngina" value="no" ngModel> No
+                                </div>
+
+                                <div class="p-4 p-md-5">
+                                    <label for="stDepressionInput" ngbTooltip="'stress-related changes in the heart's electrical activity during exercise tests'">ST Depression:</label>
+                                    <input type="number" class="form-control" id="stDepressionInput" name="stDepression"
+                                        placeholder="Enter something" min="0" ngModel>
+                                </div>
+
+                                <div class="p-4 p-md-5">
+                                    <label for="slopeSTSegmentInput" ngbTooltip="'The slope of the ST segment can be categorized into different levels to describe its characteristics. These categories, typically denoted as 0, 1, and 2,'">The slope of the peak exercise ST segment:</label>
+                                    <input type="number" class="form-control" id="slopeSTSegmentInput"
+                                        name="slopeSTSegment" placeholder="Enter something" min="0" max="2" ngModel>
+                                </div>
+
+                                <div class="p-4 p-md-5">
+                                    <label for="numMajorVesselsInput" [ngbTooltip]="'number of major blood vessels coloured by fluoroscopy'">Number of major vessels (0-3):</label>
+                                    <input type="number" class="form-control" id="numMajorVesselsInput"
+                                        name="numMajorVessels" placeholder="Enter something" min="0" max="3" ngModel>
+                                </div>
+                                <div class="p-4 p-md-5">
+                                    <label for="thalInput" ngbTooltip="'Thallium stress test results are often categorized into different levels to assess and interpret the findings. These categories, typically denoted as 0, 1, 2, and 3'">Thal:</label>
+                                    <input type="number" class="form-control" id="thalInput" name="thal"
+                                        placeholder="Enter something" min="0" max="3" ngModel>
+                                </div>
+
+
+                                <div class="p-4 p-md-3">
+                                    <button type="submit" class="btn btn-primary"
+                                        style="width: 200px; background-color: #333;">Submit</button>
+                                </div>
+                            </form>
+
+
+                        </div>
+                        <div class="col-lg-6 col-xl-7">
+                            <div class="bg-featured-blog"
+                                style="background-image: url('https://dummyimage.com/700x350/343a40/6c757d')"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container p-10 l-20 mt-5" *ngIf="showCard">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div [ngClass]="{'card': true, 'card-risk': x === 0, 'card-no-risk': x !== 0}">
+                            <div class="card-body">
+                                <h5 class="card-title">Risk Check :</h5>
+                                <p class="card-text" *ngIf="x === 0; else noRiskContent" class="card-text-risk">
+                                    There is a risk.
+                                </p>
+                                <ng-template #noRiskContent>
+                                    <p class="card-text card-text-no-risk">No risk detected.</p>
+                                </ng-template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+</main>

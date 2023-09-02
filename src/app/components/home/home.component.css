@@ -1,0 +1,16 @@
+/* Style for card when there is a risk */
+.card-risk {
+    background-color: red;
+    color: aliceblue;
+}
+
+/* Style for card when no risk is detected */
+.card-no-risk {
+    background-color: green;
+    color: aliceblue;
+}
+
+.py-3{
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
