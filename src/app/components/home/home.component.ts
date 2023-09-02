@@ -79,7 +79,7 @@ export class HomeComponent {
     }, 100); // Adjust the delay as needed (e.g., 100 milliseconds)
 
 
-    this.http.post<any>('http://127.0.0.1:5000/predict', requestData)
+    this.http.post<any>('https://mlpapi.onrender.com/predict', requestData)
       .subscribe(
         response => {
           console.log('Response:', response);
